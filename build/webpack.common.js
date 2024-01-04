@@ -78,7 +78,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV), // 设置全局环境变量
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'index.html'), // 生成index.html
+      template: path.join(__dirname, '..', 'public/index.html'), // 生成index.html
+      // favicon: path.join(__dirname, '..', 'public/favicon.ico'), // 生成index.html
     }),
   ],
   resolve: {
@@ -88,6 +89,7 @@ module.exports = {
       '@assets': path.join(__dirname, '..', 'src/assets'),
       '@components': path.join(__dirname, '..', 'src/components'),
       '@pages': path.join(__dirname, '..', 'src/pages'),
+      '@utils': path.join(__dirname, '..', 'src/utils'),
     },
   },
 }

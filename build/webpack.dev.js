@@ -14,6 +14,11 @@ module.exports = merge(webpackCommonConfig, {
     historyApiFallback: true,
     compress: true, // 启动gzip压缩
     hot: true, // 热更新
+    proxy: {
+      '/underwriting-rule': {
+        target: 'http://192.168.18.241:9005',
+      },
+    },
   },
   plugins: [new HotModuleReplacementPlugin(), new ReactRefreshWebpackPlugin()],
 })

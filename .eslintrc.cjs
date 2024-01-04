@@ -6,6 +6,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module', // 模块类型为 ES 模块
     requireConfigFile: false,
+    ecmaVersion: 2020,
   },
   // 环境配置
   env: {
